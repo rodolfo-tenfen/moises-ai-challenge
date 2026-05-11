@@ -1,6 +1,7 @@
 [versions]
 activityCompose = "1.13.0"
 agp = "8.11.2"
+compileSdk = "36"
 composeBom = "2024.09.00"
 coreKtx = "1.18.0"
 espressoCore = "3.7.0"
@@ -8,6 +9,8 @@ junit = "4.13.2"
 junitVersion = "1.3.0"
 kotlin = "2.0.21"
 lifecycleRuntimeKtx = "2.10.0"
+minSdk = "26"
+targetSdk = "36"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
