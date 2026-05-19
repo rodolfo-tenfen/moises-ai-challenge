@@ -20,4 +20,15 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Moises AI Challenge"
+
+include(":domain:music")
+
+include(":data:itunes:music")
+
+include(":presentation:splash")
+include(":presentation:songs")
+include(":presentation:song:item")
+include(":presentation:album:details")
+include(":presentation:theme")
+
 include(":app")
