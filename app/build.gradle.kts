@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+
     alias(libs.plugins.kotlin.compose)
 
     alias(libs.plugins.ktlint.gradle)
@@ -44,22 +45,14 @@ android {
 }
 
 dependencies {
+    implementation(project(":data:itunes:music"))
+    implementation(project(":presentation:splash"))
+    implementation(project(":presentation:songs"))
+    implementation(project(":presentation:album:details"))
+    implementation(project(":presentation:theme"))
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
-    debugImplementation(libs.androidx.compose.ui.tooling)
-
-    testImplementation(libs.junit)
-
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
+    implementation(libs.koin.android)
+    implementation(libs.androidx.navigation.compose)
 }
